@@ -1,9 +1,9 @@
 "use client"
 import Image from 'next/image'
 import React, { useState } from 'react'
-import HomeCard from './homecard'
+import HomeCard from './Homecard'
 import { useRouter } from 'next/navigation'
-import MeetingModal from './meetingModal'
+import MeetingModal from './MeetingModal'
 import { useUser } from '@clerk/nextjs'
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk'
 import { useToast } from "@/components/ui/use-toast"

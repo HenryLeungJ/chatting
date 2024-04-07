@@ -2,10 +2,10 @@
 import { useUser } from '@clerk/nextjs';
 import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react'
-import MeetingRoom from '@/components/meetingRoom';
-import MeetingSetup from '@/components/meetingSetup';
+import MeetingRoom from '@/components/MeetingRoom';
+import MeetingSetup from '@/components/MeetingSetup';
 import { useGetCallById } from '@/hooks/useGetCallByID';
-import Loader from '@/components/loader'
+import Loader from '@/components/Loader'
 
 const meeting = ({ params: {id} }: { params: { id: string } }) => {
 

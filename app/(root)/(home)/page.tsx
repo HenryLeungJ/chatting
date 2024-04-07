@@ -1,5 +1,5 @@
 import React from 'react'
-import MeetingTypeList from '@/components/meetingTypeList'
+import MeetingTypeList from '@/components/MeetingTypeList'
 
 function Home() {
     const now = new Date();

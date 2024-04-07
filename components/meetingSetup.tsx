@@ -37,7 +37,7 @@ const meetingSetup = ({setIsSetupComplete} : {setIsSetupComplete: (value: boolea
             </label>
             <DeviceSettings />
         </div>
-        <Button onClick={() => {call.join;
+        <Button onClick={() => {call.join();
             setIsSetupComplete(true);
         }} className="rounded-md bg-green-500 px-4 py-2.5">
             Join Meeting
