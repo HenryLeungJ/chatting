@@ -4,18 +4,24 @@ import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk';
 import React, { useState } from 'react'
 import MeetingRoom from '@/components/meetingRoom';
 import MeetingSetup from '@/components/meetingSetup';
+import { useGetCallById } from '@/hooks/useGetCallByID';
+import Loader from '@/components/loader'
 
-const meeting = ({ params }: { params: { id: string } }) => {
+const meeting = ({ params: {id} }: { params: { id: string } }) => {
 
 const {user, isLoaded} = useUser();
 
-const [isSetupComplete, setIsSetupComplete] = useState(false)
+const {call, isCallLoading } = useGetCallById(id);
+
+const [isSetupComplete, setIsSetupComplete] = useState(false);
+
+if(!isLoaded || isCallLoading) return <Loader />
   return (
     <main className="h-screen w-full">
-        <StreamCall>
+        <StreamCall call={call}>
             <StreamTheme>
                 {!isSetupComplete ? (
-                    <MeetingSetup />
+                    <MeetingSetup setIsSetupComplete={setIsSetupComplete}/>
                 ) : (
                     <MeetingRoom />
                 )}
