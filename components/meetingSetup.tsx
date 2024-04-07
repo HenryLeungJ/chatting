@@ -12,14 +12,14 @@ const meetingSetup = ({setIsSetupComplete} : {setIsSetupComplete: (value: boolea
     }
     useEffect(() => {
         if(isMicCamToggledOn) {
-            call?.camera.disable()
-            call?.microphone.disable()
+            call.camera.disable()
+            call.microphone.disable()
         }
         else{
-            call?.camera.enable();
-            call?.microphone.enable(); //to ask for camera and mic
+            call.camera.enable();
+            call.microphone.enable(); //to ask for camera and mic
         }
-    }, [isMicCamToggledOn, call?.camera, call?.microphone])
+    }, [isMicCamToggledOn, call.camera, call.microphone])
   return (
     <div className = "flex h-screen w-full flex-col items-center justify-center gap-3 text-white">
         <h1 className="text-2xl font-bold">
