@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "@/components/ui/toaster"
 
 import '@stream-io/video-react-sdk/dist/css/styles.css'
+import 'react-datepicker/dist/react-datepicker.css'
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,6 +13,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Chatty",
   description: "It's time to meet people who mean BUSINESS",
+  icons: {
+    icon: '/icons/checked.svg'
+  }
 };
 
 export default function RootLayout({
