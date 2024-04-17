@@ -2,7 +2,7 @@
 
 import { Call, CallRecording } from '@stream-io/video-react-sdk';
 
-import Loader from './Loader';
+import Loader from './loader';
 import { useGetCalls } from '@/hooks/useGetCalls';
 import MeetingCard from './MeetingCard';
 import { useEffect, useState } from 'react';
@@ -56,7 +56,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
 
         setRecordings(recordings);
       } catch (error) {
-        toast({title: 'Try again later'})
+        toast({title: 'Try again later'});
       }
       
     };

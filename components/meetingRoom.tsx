@@ -19,7 +19,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
-import Loader from './Loader';
+import Loader from './loader';
 import EndCallButton from './EndCallButton';
 import { cn } from '@/lib/utils';
 
