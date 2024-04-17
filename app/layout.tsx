@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Chatting",
   description: "Video Call for Business",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/icons/checked.svg",
   },
 };
 
