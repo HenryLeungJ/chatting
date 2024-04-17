@@ -4,8 +4,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import HomeCard from './HomeCard';
-import MeetingModal from './MeetingModal';
+import HomeCard from './homecard';
+import MeetingModal from './meetingModal';
 import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk';
 import { useUser } from '@clerk/nextjs';
 import Loader from './loader';
